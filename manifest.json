@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "ao3-spoilerfree",
+  "version": "1.0",
+
+  "description": "Spoiler-free browsing on ao3",
+
+  "icons": {
+    "48": "icon-48.png"
+  },
+
+  "action": {
+    "default_title": "spoiler-free ao3",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["storage"], // so we can keep track of whether the extension is toggled on or off
+
+  "content_scripts": [
+    {
+      "matches": ["*://archiveofourown.org/*"],
+      "js": ["spoiler_free.js"]
+    }
+  ]
+}
