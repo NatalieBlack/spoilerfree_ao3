@@ -16,6 +16,13 @@
 
   "permissions": ["storage"], // so we can keep track of whether the extension is toggled on or off
 
+    "browser_specific_settings": {  
+    "gecko": {  
+      "id": "spoilerfree-ao3@domain.tld",  // Required for permanent installation  
+      "strict_min_version": "100.0"   
+    }  
+  },
+
   "content_scripts": [
     {
       "matches": ["*://archiveofourown.org/*"],
